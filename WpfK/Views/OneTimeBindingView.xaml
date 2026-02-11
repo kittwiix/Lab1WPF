@@ -18,7 +18,7 @@
                    Foreground="#FFFF3333"
                    Margin="0,0,0,20" />
 
-        <!-- Пример OneTime привязки через ElementName -->
+        <!-- Пример OneTime привязки через ElementName (прямая привязка к TextBox) -->
         <Border Grid.Row="1"
                 Background="White"
                 CornerRadius="8"
@@ -94,7 +94,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Пример OneTime через ViewModel -->
+        <!-- Пример OneTime через ViewModel (статическое значение из VM) -->
         <Border Grid.Row="2"
                 Background="White"
                 CornerRadius="8"
@@ -132,7 +132,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Объяснение OneTime -->
+        <!-- Краткое текстовое объяснение механизма OneTime-привязки -->
         <Border Grid.Row="3"
                 Background="#FFF8F8F8"
                 CornerRadius="8"

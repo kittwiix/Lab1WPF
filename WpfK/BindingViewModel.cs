@@ -8,6 +8,7 @@ namespace WpfK
 {
     public class BindingViewModel : ViewModelBase
     {
+        /// <summary>Заголовок окна, отображаемый в UI.</summary>
         private string _title = "Лабораторная №1";
         public string Title
         {
@@ -15,6 +16,7 @@ namespace WpfK
             set => SetValue(ref _title, value ?? string.Empty);
         }
 
+        /// <summary>Текст, который синхронизируется между контролами.</summary>
         private string _syncText = "Текст для синхронизации";
         public string SyncText
         {
@@ -22,6 +24,7 @@ namespace WpfK
             set => SetValue(ref _syncText, value ?? string.Empty);
         }
 
+        /// <summary>Значение прогресс-бара в диапазоне 0–100.</summary>
         private int _progressValue = 60;
         public int ProgressValue
         {
@@ -34,6 +37,7 @@ namespace WpfK
             }
         }
 
+        /// <summary>Флаг для демонстрации булевой привязки.</summary>
         private bool _isEnabled = true;
         public bool IsEnabled
         {
@@ -41,9 +45,11 @@ namespace WpfK
             set => SetValue(ref _isEnabled, value);
         }
 
+        /// <summary>Статический текст с временем запуска приложения.</summary>
         private readonly string _initialTime = $"Запущено: {DateTime.Now:HH:mm:ss}";
         public string InitialTime => _initialTime;
 
+        /// <summary>Текст, доступный только для чтения.</summary>
         private string _readOnlyText = "Текст только для чтения";
         public string ReadOnlyText
         {
@@ -52,6 +58,7 @@ namespace WpfK
         }
 
         // Для TwoWay Binding вкладки
+        /// <summary>Текст для демонстрации двухсторонней привязки.</summary>
         private string _twoWayText1 = "Двухсторонний текст";
         public string TwoWayText1
         {
@@ -59,6 +66,7 @@ namespace WpfK
             set => SetValue(ref _twoWayText1, value ?? string.Empty);
         }
 
+        /// <summary>Булевское значение для TwoWay привязки CheckBox.</summary>
         private bool _twoWayBool = true;
         public bool TwoWayBool
         {
@@ -66,6 +74,7 @@ namespace WpfK
             set => SetValue(ref _twoWayBool, value);
         }
 
+        /// <summary>Числовое значение для TwoWay привязки Slider/TextBox.</summary>
         private double _twoWayNumber = 50;
         public double TwoWayNumber
         {
@@ -79,6 +88,7 @@ namespace WpfK
         }
 
         // Для OneWay Binding вкладки
+        /// <summary>Текущее время, обновляемое таймером.</summary>
         private DateTime _currentTime = DateTime.Now;
         public DateTime CurrentTime
         {
@@ -86,6 +96,7 @@ namespace WpfK
             set => SetValue(ref _currentTime, value);
         }
 
+        /// <summary>Текст, который передаётся только в источник (OneWayToSource).</summary>
         private string _oneWayToSourceText = "";
         public string OneWayToSourceText
         {
@@ -94,6 +105,7 @@ namespace WpfK
         }
 
         // Для Triggers вкладки
+        /// <summary>Текст для демонстрации работы триггеров данных.</summary>
         private string _dataTriggerText = "";
         public string DataTriggerText
         {
@@ -101,9 +113,11 @@ namespace WpfK
             set => SetValue(ref _dataTriggerText, value ?? string.Empty);
         }
 
+        /// <summary>Коллекция строк для примера привязки списка.</summary>
         public ObservableCollection<string> DataList { get; } = new();
 
         // Команды для первой вкладки
+        /// <summary>Команда обновления заголовка окна.</summary>
         private ICommand? _refreshCommand;
         public ICommand RefreshCommand =>
             _refreshCommand ??= new SimpleCommand(() =>
@@ -120,6 +134,7 @@ namespace WpfK
                 }
             });
 
+        /// <summary>Команда переключения булевого флага IsEnabled.</summary>
         private ICommand? _switchCommand;
         public ICommand SwitchCommand =>
             _switchCommand ??= new SimpleCommand(() =>
@@ -127,6 +142,7 @@ namespace WpfK
                 IsEnabled = !IsEnabled;
             });
 
+        /// <summary>Команда сброса значений на вкладке по умолчанию.</summary>
         private ICommand? _resetCommand;
         public ICommand ResetCommand =>
             _resetCommand ??= new SimpleCommand(() =>
@@ -136,6 +152,7 @@ namespace WpfK
                 ProgressValue = 50;
             });
 
+        /// <summary>Команда добавления нового элемента в список.</summary>
         private ICommand? _addDataCommand;
         public ICommand AddDataCommand =>
             _addDataCommand ??= new SimpleCommand(() =>
@@ -160,6 +177,7 @@ namespace WpfK
             });
 
         // Команды для TwoWay вкладки
+        /// <summary>Команда переключения булевого значения для TwoWay примера.</summary>
         private ICommand? _toggleTwoWayCommand;
         public ICommand ToggleTwoWayCommand =>
             _toggleTwoWayCommand ??= new SimpleCommand(() =>
@@ -168,6 +186,7 @@ namespace WpfK
             });
 
         // Команды для OneWay вкладки
+        /// <summary>Команда отображения текста, записанного в ViewModel через OneWayToSource.</summary>
         private ICommand? _showOneWayToSourceCommand;
         public ICommand ShowOneWayToSourceCommand =>
             _showOneWayToSourceCommand ??= new SimpleCommand(() =>

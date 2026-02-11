@@ -5,8 +5,10 @@ namespace WpfK
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
+        /// <summary>Базовый класс ViewModel с реализацией INotifyPropertyChanged.</summary>
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        /// <summary>Уведомляет представление об изменении указанного свойства.</summary>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             try
@@ -22,6 +24,7 @@ namespace WpfK
             }
         }
 
+        /// <summary>Безопасно устанавливает значение свойства и вызывает OnPropertyChanged.</summary>
         protected bool SetValue<T>(ref T field, T value, [CallerMemberName] string propertyName = "")
         {
             try

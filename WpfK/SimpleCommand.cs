@@ -6,7 +6,9 @@ namespace WpfK
 {
     public class SimpleCommand : ICommand
     {
+        /// <summary>Делегат действия, выполняемого командой.</summary>
         private readonly Action _execute;
+        /// <summary>Необязательная функция проверки доступности команды.</summary>
         private readonly Func<bool>? _canExecute;
 
         public event EventHandler? CanExecuteChanged
@@ -21,6 +23,7 @@ namespace WpfK
             _canExecute = canExecute;
         }
 
+        /// <summary>Определяет, можно ли выполнить команду в текущем состоянии.</summary>
         public bool CanExecute(object? parameter)
         {
             try
@@ -34,6 +37,7 @@ namespace WpfK
             }
         }
 
+        /// <summary>Вызывает делегат выполнения команды.</summary>
         public void Execute(object? parameter)
         {
             try

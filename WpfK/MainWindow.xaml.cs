@@ -5,6 +5,7 @@ namespace WpfK
 {
     public partial class MainWindow : Window
     {
+        /// <summary>Главное окно приложения, инициализирующее привязки.</summary>
         public MainWindow()
         {
             try

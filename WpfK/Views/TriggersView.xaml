@@ -21,7 +21,7 @@
                    Foreground="#FF0066CC"
                    Margin="0,0,0,20" />
 
-        <!-- Property Triggers -->
+        <!-- Property Triggers: реагируют на изменение свойств элемента управления -->
         <Border Grid.Row="1"
                 Background="White"
                 CornerRadius="8"
@@ -69,7 +69,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Data Triggers -->
+        <!-- Data Triggers: зависят от значений свойств ViewModel -->
         <Border Grid.Row="2"
                 Background="White"
                 CornerRadius="8"
@@ -143,7 +143,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Event Triggers -->
+        <!-- Event Triggers: запускают анимации/действия по событиям -->
         <Border Grid.Row="3"
                 Background="White"
                 CornerRadius="8"
@@ -209,7 +209,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Multi Trigger -->
+        <!-- Multi Trigger: несколько условий по свойствам элемента -->
         <Border Grid.Row="4"
                 Background="White"
                 CornerRadius="8"
@@ -267,7 +267,7 @@
             </StackPanel>
         </Border>
 
-        <!-- MultiData Trigger -->
+        <!-- MultiData Trigger: несколько условий на данных привязки -->
         <Border Grid.Row="5"
                 Background="White"
                 CornerRadius="8"
@@ -334,7 +334,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Сравнение триггеров -->
+        <!-- Сравнительная таблица по основным видам триггеров -->
         <Border Grid.Row="6"
                 Background="#FFF8F8F8"
                 CornerRadius="8"

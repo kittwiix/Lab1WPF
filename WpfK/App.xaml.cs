@@ -6,6 +6,7 @@ namespace WpfK
 {
     public partial class App : Application
     {
+        /// <summary>Точка входа WPF-приложения с подключением обработчиков ошибок.</summary>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -15,6 +16,7 @@ namespace WpfK
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
 
+        /// <summary>Обработка необработанных исключений на UI-потоке.</summary>
         private void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             try
@@ -30,6 +32,7 @@ namespace WpfK
             e.Handled = true; // Помечаем как обработанное, чтобы приложение не закрылось
         }
 
+        /// <summary>Обработка критических исключений домена приложений.</summary>
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             try

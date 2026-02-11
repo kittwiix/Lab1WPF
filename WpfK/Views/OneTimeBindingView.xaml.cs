@@ -7,6 +7,7 @@ namespace WpfK.Views
 {
     public partial class OneTimeBindingView : UserControl
     {
+        /// <summary>Инициализирует визуальную часть примера OneTime-привязки.</summary>
         public OneTimeBindingView()
         {
             try
@@ -20,6 +21,7 @@ namespace WpfK.Views
             }
         }
 
+        /// <summary>Изменяет текст в источнике привязки для демонстрации OneTime.</summary>
         private void ChangeSourceText_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -36,6 +38,7 @@ namespace WpfK.Views
             }
         }
 
+        /// <summary>Принудительно переинициализирует OneTime-привязку через код.</summary>
         private void RefreshBinding_Click(object sender, RoutedEventArgs e)
         {
             try

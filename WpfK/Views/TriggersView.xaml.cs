@@ -6,6 +6,7 @@ namespace WpfK.Views
 {
     public partial class TriggersView : UserControl
     {
+        /// <summary>Инициализирует вкладку с примерами разных типов триггеров.</summary>
         public TriggersView()
         {
             try
@@ -20,6 +21,7 @@ namespace WpfK.Views
             }
         }
 
+        /// <summary>Заполняет таблицу краткими описаниями триггеров.</summary>
         private void InitializeTriggersComparison()
         {
             try
@@ -71,8 +73,11 @@ namespace WpfK.Views
 
     public class TriggerInfo
     {
+        /// <summary>Человекочитаемое название триггера.</summary>
         public string Type { get; set; } = string.Empty;
+        /// <summary>Краткое условие, при котором срабатывает триггер.</summary>
         public string Condition { get; set; } = string.Empty;
+        /// <summary>Пример использования конкретного триггера.</summary>
         public string Example { get; set; } = string.Empty;
     }
 }
