@@ -6,6 +6,7 @@ using System.Windows.Threading;
 
 namespace WpfK
 {
+    /// <summary>ViewModel для вкладок привязок, использующая базу CommunityToolkit.Mvvm.</summary>
     public class BindingViewModel : ViewModelBase
     {
         /// <summary>Заголовок окна, отображаемый в UI.</summary>
