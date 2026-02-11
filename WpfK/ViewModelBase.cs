@@ -1,49 +1,15 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace WpfK
 {
-    public abstract class ViewModelBase : INotifyPropertyChanged
+    /// <summary>Базовый ViewModel на основе ObservableObject из CommunityToolkit.Mvvm.</summary>
+    public abstract class ViewModelBase : ObservableObject
     {
-        /// <summary>Базовый класс ViewModel с реализацией INotifyPropertyChanged.</summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>Уведомляет представление об изменении указанного свойства.</summary>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            try
-            {
-                if (!string.IsNullOrEmpty(propertyName))
-                {
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Ошибка в OnPropertyChanged для свойства {propertyName}: {ex.Message}");
-            }
-        }
-
-        /// <summary>Безопасно устанавливает значение свойства и вызывает OnPropertyChanged.</summary>
+        /// <summary>Обёртка над SetProperty Toolkit для совместимости с веткой master.</summary>
         protected bool SetValue<T>(ref T field, T value, [CallerMemberName] string propertyName = "")
         {
-            try
-            {
-                if (string.IsNullOrEmpty(propertyName))
-                    return false;
-
-                if (System.Collections.Generic.EqualityComparer<T>.Default.Equals(field, value))
-                    return false;
-
-                field = value;
-                OnPropertyChanged(propertyName);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Ошибка в SetValue для свойства {propertyName}: {ex.Message}");
-                return false;
-            }
+            return SetProperty(ref field, value, propertyName);
         }
     }
 }
