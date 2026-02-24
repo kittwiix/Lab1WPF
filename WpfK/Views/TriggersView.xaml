@@ -160,6 +160,7 @@
 
                 <Border x:Name="EventTriggerBox"
                         Background="#FF007ACC"
+                        Width="300"
                         MinWidth="250"
                         MaxWidth="400"
                         Height="120"
