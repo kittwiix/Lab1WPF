@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -162,11 +162,13 @@ namespace WpfK
                     // Проверка на максимальное количество элементов
                     if (DataList.Count >= 100)
                     {
-                        MessageBox.Show("Достигнуто максимальное количество записей (100)", 
-                            "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show(LocalizationManager.Instance.MsgMaxRecords, 
+                            LocalizationManager.Instance.MsgWarning, MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
                     DataList.Add($"Запись {DataList.Count + 1}");
+                    MessageBox.Show(LocalizationManager.Instance.MsgRecordAdded,
+                        LocalizationManager.Instance.MsgSuccess, MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (Exception ex)
                 {

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" msdata:Ordinal="5" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>WPF Bindings and Triggers</value>
+  </data>
+  <data name="TabDefaultBinding" xml:space="preserve">
+    <value>Default binding</value>
+  </data>
+  <data name="TabTwoWayBinding" xml:space="preserve">
+    <value>Two-way binding</value>
+  </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="HeaderWindowTitle" xml:space="preserve">
+    <value>Window title:</value>
+  </data>
+  <data name="HeaderSync" xml:space="preserve">
+    <value>Synchronization:</value>
+  </data>
+  <data name="HeaderProgress" xml:space="preserve">
+    <value>Progress:</value>
+  </data>
+  <data name="HeaderState" xml:space="preserve">
+    <value>State:</value>
+  </data>
+  <data name="HeaderLaunchTime" xml:space="preserve">
+    <value>Launch time:</value>
+  </data>
+  <data name="HeaderReadOnly" xml:space="preserve">
+    <value>Read only:</value>
+  </data>
+  <data name="HeaderDataList" xml:space="preserve">
+    <value>Data list:</value>
+  </data>
+  <data name="GridViewValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="BtnRefresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="BtnSwitch" xml:space="preserve">
+    <value>Switch</value>
+  </data>
+  <data name="BtnReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="BtnAddRecord" xml:space="preserve">
+    <value>Add record</value>
+  </data>
+  <data name="DefaultBindingTitle" xml:space="preserve">
+    <value>Default binding (Default Binding Mode)</value>
+  </data>
+  <data name="DefaultBindingText1" xml:space="preserve">
+    <value>• For TextBox: TwoWay - changes sync both ways</value>
+  </data>
+  <data name="DefaultBindingText2" xml:space="preserve">
+    <value>• For TextBlock: OneWay - read-only from ViewModel</value>
+  </data>
+  <data name="DefaultBindingText3" xml:space="preserve">
+    <value>• For ProgressBar: OneWay - updates from ViewModel only</value>
+  </data>
+  <data name="TwoWayBindingTitle" xml:space="preserve">
+    <value>Two-way binding (TwoWay Binding)</value>
+  </data>
+  <data name="Example1Title" xml:space="preserve">
+    <value>Example 1: Two TextBoxes synced via ViewModel</value>
+  </data>
+  <data name="Example1Desc" xml:space="preserve">
+    <value>Change text in either field - the other updates automatically</value>
+  </data>
+  <data name="Field1VM" xml:space="preserve">
+    <value>Field 1 (ViewModel):</value>
+  </data>
+  <data name="Field2VM" xml:space="preserve">
+    <value>Field 2 (ViewModel):</value>
+  </data>
+  <data name="CurrentValueVM" xml:space="preserve">
+    <value>Current value in ViewModel:</value>
+  </data>
+  <data name="Example1bTitle" xml:space="preserve">
+    <value>Example 1b: Direct element binding (ElementName)</value>
+  </data>
+  <data name="Example1bDesc" xml:space="preserve">
+    <value>Changes in the first field directly update the second (no ViewModel)</value>
+  </data>
+  <data name="Field1Direct" xml:space="preserve">
+    <value>Field 1 (direct):</value>
+  </data>
+  <data name="Field2Bound" xml:space="preserve">
+    <value>Field 2 (bound):</value>
+  </data>
+  <data name="DirectBindingText" xml:space="preserve">
+    <value>Direct binding</value>
+  </data>
+  <data name="Example2Title" xml:space="preserve">
+    <value>Example 2: CheckBox with sync</value>
+  </data>
+  <data name="CheckBoxOption" xml:space="preserve">
+    <value>Enable option</value>
+  </data>
+  <data name="StateFormat" xml:space="preserve">
+    <value>State: {0}</value>
+  </data>
+  <data name="BtnToggleVM" xml:space="preserve">
+    <value>Toggle via ViewModel</value>
+  </data>
+  <data name="Example3Title" xml:space="preserve">
+    <value>Example 3: Slider with sync</value>
+  </data>
+  <data name="LabelValue" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="CurrentValueFormat" xml:space="preserve">
+    <value>Current value: {0:F1}</value>
+  </data>
+  <data name="TwoWayHowTitle" xml:space="preserve">
+    <value>How TwoWay binding works:</value>
+  </data>
+  <data name="TwoWayHow1" xml:space="preserve">
+    <value>• UI changes update ViewModel</value>
+  </data>
+  <data name="TwoWayHow2" xml:space="preserve">
+    <value>• ViewModel changes update UI</value>
+  </data>
+  <data name="TwoWayHow3" xml:space="preserve">
+    <value>• UpdateSourceTrigger=PropertyChanged - update on every change</value>
+  </data>
+  <data name="TwoWayHow4" xml:space="preserve">
+    <value>• UpdateSourceTrigger=LostFocus - update on focus loss</value>
+  </data>
+  <data name="TwoWayHow5" xml:space="preserve">
+    <value>• Direct binding (ElementName) links elements without ViewModel</value>
+  </data>
+  <data name="MsgMaxRecords" xml:space="preserve">
+    <value>Maximum number of records reached (100)</value>
+  </data>
+  <data name="MsgWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MsgRecordAdded" xml:space="preserve">
+    <value>Record added successfully!</value>
+  </data>
+  <data name="MsgSuccess" xml:space="preserve">
+    <value>Success</value>
+  </data>
+</root>

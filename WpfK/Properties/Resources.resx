@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" msdata:Ordinal="5" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>WPF Привязки и Триггеры</value>
+  </data>
+  <data name="TabDefaultBinding" xml:space="preserve">
+    <value>Привязка по умолчанию</value>
+  </data>
+  <data name="TabTwoWayBinding" xml:space="preserve">
+    <value>Двухсторонняя привязка</value>
+  </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>Язык:</value>
+  </data>
+  <data name="HeaderWindowTitle" xml:space="preserve">
+    <value>Заголовок окна:</value>
+  </data>
+  <data name="HeaderSync" xml:space="preserve">
+    <value>Синхронизация:</value>
+  </data>
+  <data name="HeaderProgress" xml:space="preserve">
+    <value>Прогресс:</value>
+  </data>
+  <data name="HeaderState" xml:space="preserve">
+    <value>Состояние:</value>
+  </data>
+  <data name="HeaderLaunchTime" xml:space="preserve">
+    <value>Время запуска:</value>
+  </data>
+  <data name="HeaderReadOnly" xml:space="preserve">
+    <value>Только чтение:</value>
+  </data>
+  <data name="HeaderDataList" xml:space="preserve">
+    <value>Список данных:</value>
+  </data>
+  <data name="GridViewValue" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="BtnRefresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="BtnSwitch" xml:space="preserve">
+    <value>Переключить</value>
+  </data>
+  <data name="BtnReset" xml:space="preserve">
+    <value>Сброс</value>
+  </data>
+  <data name="BtnAddRecord" xml:space="preserve">
+    <value>Добавить запись</value>
+  </data>
+  <data name="DefaultBindingTitle" xml:space="preserve">
+    <value>Привязка по умолчанию (Default Binding Mode)</value>
+  </data>
+  <data name="DefaultBindingText1" xml:space="preserve">
+    <value>• Для TextBox: TwoWay - изменения синхронизируются в обе стороны</value>
+  </data>
+  <data name="DefaultBindingText2" xml:space="preserve">
+    <value>• Для TextBlock: OneWay - только чтение из ViewModel</value>
+  </data>
+  <data name="DefaultBindingText3" xml:space="preserve">
+    <value>• Для ProgressBar: OneWay - только обновление из ViewModel</value>
+  </data>
+  <data name="TwoWayBindingTitle" xml:space="preserve">
+    <value>Двухсторонняя привязка (TwoWay Binding)</value>
+  </data>
+  <data name="Example1Title" xml:space="preserve">
+    <value>Пример 1: Два TextBox с синхронизацией через ViewModel</value>
+  </data>
+  <data name="Example1Desc" xml:space="preserve">
+    <value>Измените текст в любом поле - второе обновится автоматически</value>
+  </data>
+  <data name="Field1VM" xml:space="preserve">
+    <value>Поле 1 (ViewModel):</value>
+  </data>
+  <data name="Field2VM" xml:space="preserve">
+    <value>Поле 2 (ViewModel):</value>
+  </data>
+  <data name="CurrentValueVM" xml:space="preserve">
+    <value>Текущее значение в ViewModel:</value>
+  </data>
+  <data name="Example1bTitle" xml:space="preserve">
+    <value>Пример 1b: Прямая привязка между элементами (ElementName)</value>
+  </data>
+  <data name="Example1bDesc" xml:space="preserve">
+    <value>Изменения в первом поле напрямую обновляют второе (без ViewModel)</value>
+  </data>
+  <data name="Field1Direct" xml:space="preserve">
+    <value>Поле 1 (прямая):</value>
+  </data>
+  <data name="Field2Bound" xml:space="preserve">
+    <value>Поле 2 (привязано):</value>
+  </data>
+  <data name="DirectBindingText" xml:space="preserve">
+    <value>Прямая привязка</value>
+  </data>
+  <data name="Example2Title" xml:space="preserve">
+    <value>Пример 2: CheckBox с синхронизацией</value>
+  </data>
+  <data name="CheckBoxOption" xml:space="preserve">
+    <value>Включить опцию</value>
+  </data>
+  <data name="StateFormat" xml:space="preserve">
+    <value>Состояние: {0}</value>
+  </data>
+  <data name="BtnToggleVM" xml:space="preserve">
+    <value>Переключить через ViewModel</value>
+  </data>
+  <data name="Example3Title" xml:space="preserve">
+    <value>Пример 3: Slider с синхронизацией</value>
+  </data>
+  <data name="LabelValue" xml:space="preserve">
+    <value>Значение:</value>
+  </data>
+  <data name="CurrentValueFormat" xml:space="preserve">
+    <value>Текущее значение: {0:F1}</value>
+  </data>
+  <data name="TwoWayHowTitle" xml:space="preserve">
+    <value>Как работает TwoWay привязка:</value>
+  </data>
+  <data name="TwoWayHow1" xml:space="preserve">
+    <value>• Изменения в UI обновляют ViewModel</value>
+  </data>
+  <data name="TwoWayHow2" xml:space="preserve">
+    <value>• Изменения в ViewModel обновляют UI</value>
+  </data>
+  <data name="TwoWayHow3" xml:space="preserve">
+    <value>• UpdateSourceTrigger=PropertyChanged - обновление при каждом изменении</value>
+  </data>
+  <data name="TwoWayHow4" xml:space="preserve">
+    <value>• UpdateSourceTrigger=LostFocus - обновление при потере фокуса</value>
+  </data>
+  <data name="TwoWayHow5" xml:space="preserve">
+    <value>• Прямая привязка (ElementName) связывает элементы напрямую без ViewModel</value>
+  </data>
+  <data name="MsgMaxRecords" xml:space="preserve">
+    <value>Достигнуто максимальное количество записей (100)</value>
+  </data>
+  <data name="MsgWarning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="MsgRecordAdded" xml:space="preserve">
+    <value>Запись добавлена успешно!</value>
+  </data>
+  <data name="MsgSuccess" xml:space="preserve">
+    <value>Успех</value>
+  </data>
+</root>
