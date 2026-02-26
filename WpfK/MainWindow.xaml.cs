@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace WpfK
 {
@@ -14,12 +15,6 @@ namespace WpfK
                 
                 var viewModel = new BindingViewModel();
                 DataContext = viewModel;
-                
-                // Устанавливаем Title после установки DataContext
-                if (viewModel != null && !string.IsNullOrEmpty(viewModel.Title))
-                {
-                    Title = viewModel.Title;
-                }
             }
             catch (Exception ex)
             {
@@ -33,6 +28,14 @@ namespace WpfK
                 {
                     Environment.Exit(1);
                 }
+            }
+        }
+
+        private void LanguageComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (LanguageComboBox?.SelectedItem is ComboBoxItem item && item.Tag is string cultureName)
+            {
+                LocManager.SetCulture(cultureName);
             }
         }
     }

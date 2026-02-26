@@ -17,5 +17,25 @@ namespace WpfK.Views
                 throw;
             }
         }
+
+        private void UserControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            UpdateDirectTextBoxInitialText();
+            LocManager.CultureChanged += OnCultureChanged;
+            Unloaded += (s, args) => LocManager.CultureChanged -= OnCultureChanged;
+        }
+
+        private void OnCultureChanged(object? sender, EventArgs e)
+        {
+            UpdateDirectTextBoxInitialText();
+        }
+
+        private void UpdateDirectTextBoxInitialText()
+        {
+            if (DirectTextBox1 != null)
+            {
+                DirectTextBox1.Text = LocManager.GetString("DirectBindingText");
+            }
+        }
     }
 }

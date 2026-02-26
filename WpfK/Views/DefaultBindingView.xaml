@@ -22,7 +22,7 @@
         <!-- Заголовок -->
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
-                   Text="Заголовок окна:"
+                   Text="{DynamicResource HeaderWindowTitle}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -44,7 +44,7 @@
         <!-- Синхронизируемый текст -->
         <TextBlock Grid.Row="1"
                    Grid.Column="0"
-                   Text="Синхронизация:"
+                   Text="{DynamicResource HeaderSync}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -63,7 +63,7 @@
         <!-- Прогресс-бар -->
         <TextBlock Grid.Row="2"
                    Grid.Column="0"
-                   Text="Прогресс:"
+                   Text="{DynamicResource HeaderProgress}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -93,7 +93,7 @@
         <!-- Включение/выключение -->
         <TextBlock Grid.Row="3"
                    Grid.Column="0"
-                   Text="Состояние:"
+                   Text="{DynamicResource HeaderState}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -115,7 +115,7 @@
         <!-- Время запуска -->
         <TextBlock Grid.Row="4"
                    Grid.Column="0"
-                   Text="Время запуска:"
+                   Text="{DynamicResource HeaderLaunchTime}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -137,7 +137,7 @@
         <!-- Только для чтения -->
         <TextBlock Grid.Row="5"
                    Grid.Column="0"
-                   Text="Только чтение:"
+                   Text="{DynamicResource HeaderReadOnly}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -159,7 +159,7 @@
         <!-- Список данных -->
         <TextBlock Grid.Row="6"
                    Grid.Column="0"
-                   Text="Список данных:"
+                   Text="{DynamicResource HeaderDataList}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -176,7 +176,7 @@
                       BorderThickness="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Значение"
+                        <GridViewColumn Header="{DynamicResource GridViewValue}"
                                         Width="240">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -202,7 +202,7 @@
                 Padding="15">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Button Content="Обновить"
+                <Button Content="{DynamicResource BtnRefresh}"
                         Command="{Binding RefreshCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -212,7 +212,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Переключить"
+                <Button Content="{DynamicResource BtnSwitch}"
                         Command="{Binding SwitchCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -222,7 +222,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Сброс"
+                <Button Content="{DynamicResource BtnReset}"
                         Command="{Binding ResetCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -232,7 +232,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Добавить запись"
+                <Button Content="{DynamicResource BtnAddRecord}"
                         Command="{Binding AddDataCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -255,15 +255,15 @@
                 Margin="5"
                 Padding="10">
             <StackPanel>
-                <TextBlock Text="Привязка по умолчанию (Default Binding Mode)"
+                <TextBlock Text="{DynamicResource DefaultBindingTitle}"
                            FontWeight="Bold"
                            Foreground="#FF0066CC"
                            Margin="0,0,0,5" />
-                <TextBlock Text="• Для TextBox: TwoWay - изменения синхронизируются в обе стороны"
+                <TextBlock Text="{DynamicResource DefaultBindingText1}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="• Для TextBlock: OneWay - только чтение из ViewModel"
+                <TextBlock Text="{DynamicResource DefaultBindingText2}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="• Для ProgressBar: OneWay - только обновление из ViewModel"
+                <TextBlock Text="{DynamicResource DefaultBindingText3}"
                            TextWrapping="Wrap" />
             </StackPanel>
         </Border>

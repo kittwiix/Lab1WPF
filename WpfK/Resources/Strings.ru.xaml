@@ -1,0 +1,53 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <sys:String x:Key="WindowTitle">WPF Привязки и Триггеры</sys:String>
+    <sys:String x:Key="TabDefaultBinding">Привязка по умолчанию</sys:String>
+    <sys:String x:Key="TabTwoWayBinding">Двухсторонняя привязка</sys:String>
+    <sys:String x:Key="LabelLanguage">Язык:</sys:String>
+    <sys:String x:Key="HeaderWindowTitle">Заголовок окна:</sys:String>
+    <sys:String x:Key="HeaderSync">Синхронизация:</sys:String>
+    <sys:String x:Key="HeaderProgress">Прогресс:</sys:String>
+    <sys:String x:Key="HeaderState">Состояние:</sys:String>
+    <sys:String x:Key="HeaderLaunchTime">Время запуска:</sys:String>
+    <sys:String x:Key="HeaderReadOnly">Только чтение:</sys:String>
+    <sys:String x:Key="HeaderDataList">Список данных:</sys:String>
+    <sys:String x:Key="GridViewValue">Значение</sys:String>
+    <sys:String x:Key="BtnRefresh">Обновить</sys:String>
+    <sys:String x:Key="BtnSwitch">Переключить</sys:String>
+    <sys:String x:Key="BtnReset">Сброс</sys:String>
+    <sys:String x:Key="BtnAddRecord">Добавить запись</sys:String>
+    <sys:String x:Key="DefaultBindingTitle">Привязка по умолчанию (Default Binding Mode)</sys:String>
+    <sys:String x:Key="DefaultBindingText1">• Для TextBox: TwoWay - изменения синхронизируются в обе стороны</sys:String>
+    <sys:String x:Key="DefaultBindingText2">• Для TextBlock: OneWay - только чтение из ViewModel</sys:String>
+    <sys:String x:Key="DefaultBindingText3">• Для ProgressBar: OneWay - только обновление из ViewModel</sys:String>
+    <sys:String x:Key="TwoWayBindingTitle">Двухсторонняя привязка (TwoWay Binding)</sys:String>
+    <sys:String x:Key="Example1Title">Пример 1: Два TextBox с синхронизацией через ViewModel</sys:String>
+    <sys:String x:Key="Example1Desc">Измените текст в любом поле - второе обновится автоматически</sys:String>
+    <sys:String x:Key="Field1VM">Поле 1 (ViewModel):</sys:String>
+    <sys:String x:Key="Field2VM">Поле 2 (ViewModel):</sys:String>
+    <sys:String x:Key="CurrentValueVM">Текущее значение в ViewModel:</sys:String>
+    <sys:String x:Key="Example1bTitle">Пример 1b: Прямая привязка между элементами (ElementName)</sys:String>
+    <sys:String x:Key="Example1bDesc">Изменения в первом поле напрямую обновляют второе (без ViewModel)</sys:String>
+    <sys:String x:Key="Field1Direct">Поле 1 (прямая):</sys:String>
+    <sys:String x:Key="Field2Bound">Поле 2 (привязано):</sys:String>
+    <sys:String x:Key="DirectBindingText">Прямая привязка</sys:String>
+    <sys:String x:Key="Example2Title">Пример 2: CheckBox с синхронизацией</sys:String>
+    <sys:String x:Key="CheckBoxOption">Включить опцию</sys:String>
+    <sys:String x:Key="StateFormat">Состояние: {0}</sys:String>
+    <sys:String x:Key="BtnToggleVM">Переключить через ViewModel</sys:String>
+    <sys:String x:Key="Example3Title">Пример 3: Slider с синхронизацией</sys:String>
+    <sys:String x:Key="LabelValue">Значение:</sys:String>
+    <sys:String x:Key="CurrentValueFormat">Текущее значение: {0:F1}</sys:String>
+    <sys:String x:Key="TwoWayHowTitle">Как работает TwoWay привязка:</sys:String>
+    <sys:String x:Key="TwoWayHow1">• Изменения в UI обновляют ViewModel</sys:String>
+    <sys:String x:Key="TwoWayHow2">• Изменения в ViewModel обновляют UI</sys:String>
+    <sys:String x:Key="TwoWayHow3">• UpdateSourceTrigger=PropertyChanged - обновление при каждом изменении</sys:String>
+    <sys:String x:Key="TwoWayHow4">• UpdateSourceTrigger=LostFocus - обновление при потере фокуса</sys:String>
+    <sys:String x:Key="TwoWayHow5">• Прямая привязка (ElementName) связывает элементы напрямую без ViewModel</sys:String>
+    <sys:String x:Key="MsgMaxRecords">Достигнуто максимальное количество записей (100)</sys:String>
+    <sys:String x:Key="MsgWarning">Предупреждение</sys:String>
+    <sys:String x:Key="MsgError">Ошибка</sys:String>
+    <sys:String x:Key="MsgRecordAdded">Запись добавлена успешно!</sys:String>
+    <sys:String x:Key="MsgSuccess">Успех</sys:String>
+</ResourceDictionary>
