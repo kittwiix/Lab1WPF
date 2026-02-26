@@ -1,6 +1,7 @@
 <UserControl x:Class="WpfK.Views.DefaultBindingView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:l10n="clr-namespace:WpfK.L10n;assembly=WpfK.L10n">
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
         <Grid Margin="10" MinWidth="600">
         <Grid.RowDefinitions>
@@ -22,7 +23,7 @@
         <!-- Заголовок -->
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
-                   Text="Заголовок окна:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderWindowTitle}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -44,7 +45,7 @@
         <!-- Синхронизируемый текст -->
         <TextBlock Grid.Row="1"
                    Grid.Column="0"
-                   Text="Синхронизация:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderSync}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -63,7 +64,7 @@
         <!-- Прогресс-бар -->
         <TextBlock Grid.Row="2"
                    Grid.Column="0"
-                   Text="Прогресс:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderProgress}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -93,7 +94,7 @@
         <!-- Включение/выключение -->
         <TextBlock Grid.Row="3"
                    Grid.Column="0"
-                   Text="Состояние:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderState}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -115,7 +116,7 @@
         <!-- Время запуска -->
         <TextBlock Grid.Row="4"
                    Grid.Column="0"
-                   Text="Время запуска:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderLaunchTime}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -137,7 +138,7 @@
         <!-- Только для чтения -->
         <TextBlock Grid.Row="5"
                    Grid.Column="0"
-                   Text="Только чтение:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderReadOnly}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -159,7 +160,7 @@
         <!-- Список данных -->
         <TextBlock Grid.Row="6"
                    Grid.Column="0"
-                   Text="Список данных:"
+                   Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=HeaderDataList}"
                    Margin="5"
                    VerticalAlignment="Center"
                    FontWeight="SemiBold" />
@@ -176,7 +177,7 @@
                       BorderThickness="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Значение"
+                        <GridViewColumn Header="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=GridViewValue}"
                                         Width="240">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -202,7 +203,7 @@
                 Padding="15">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Button Content="Обновить"
+                <Button Content="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=BtnRefresh}"
                         Command="{Binding RefreshCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -212,7 +213,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Переключить"
+                <Button Content="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=BtnSwitch}"
                         Command="{Binding SwitchCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -222,7 +223,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Сброс"
+                <Button Content="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=BtnReset}"
                         Command="{Binding ResetCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -232,7 +233,7 @@
                         BorderThickness="0"
                         MinWidth="120" />
 
-                <Button Content="Добавить запись"
+                <Button Content="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=BtnAddRecord}"
                         Command="{Binding AddDataCommand}"
                         Margin="8"
                         Padding="15,8"
@@ -255,15 +256,15 @@
                 Margin="5"
                 Padding="10">
             <StackPanel>
-                <TextBlock Text="Привязка по умолчанию (Default Binding Mode)"
+                <TextBlock Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=DefaultBindingTitle}"
                            FontWeight="Bold"
                            Foreground="#FF0066CC"
                            Margin="0,0,0,5" />
-                <TextBlock Text="• Для TextBox: TwoWay - изменения синхронизируются в обе стороны"
+                <TextBlock Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=DefaultBindingText1}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="• Для TextBlock: OneWay - только чтение из ViewModel"
+                <TextBlock Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=DefaultBindingText2}"
                            TextWrapping="Wrap" />
-                <TextBlock Text="• Для ProgressBar: OneWay - только обновление из ViewModel"
+                <TextBlock Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=DefaultBindingText3}"
                            TextWrapping="Wrap" />
             </StackPanel>
         </Border>

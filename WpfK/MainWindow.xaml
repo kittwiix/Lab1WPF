@@ -1,8 +1,9 @@
-﻿<Window x:Class="WpfK.MainWindow"
+<Window x:Class="WpfK.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:WpfK.Views"
-        Title="WPF Привязки и Триггеры"
+        xmlns:l10n="clr-namespace:WpfK.L10n;assembly=WpfK.L10n"
+        Title="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=WindowTitle}"
         Height="700"
         Width="900"
         MinHeight="500"
@@ -30,14 +31,26 @@
     </Window.Resources>
 
     <Grid>
-        <TabControl>
-            <!-- Вкладка 1: Привязка по умолчанию -->
-            <TabItem Header="Привязка по умолчанию">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="White" Padding="10" BorderBrush="#FFCCCCCC" BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=LabelLanguage}"
+                           VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" />
+                <ComboBox x:Name="LanguageComboBox" Width="120" SelectionChanged="LanguageComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Русский" Tag="ru" IsSelected="True" />
+                    <ComboBoxItem Content="English" Tag="en" />
+                </ComboBox>
+            </StackPanel>
+        </Border>
+        <TabControl Grid.Row="1">
+            <TabItem Header="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=TabDefaultBinding}">
                 <views:DefaultBindingView />
             </TabItem>
 
-            <!-- Вкладка 2: Двухсторонняя привязка -->
-            <TabItem Header="Двухсторонняя привязка">
+            <TabItem Header="{Binding Source={x:Static l10n:LocalizationProvider.Instance}, Path=TabTwoWayBinding}">
                 <views:TwoWayBindingView />
             </TabItem>
 
